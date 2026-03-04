@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip --version)",
+      "Bash(node --version)",
+      "Bash(npm --version)",
+      "Bash(pip show yfinance)",
+      "Bash(pip show fastapi)",
+      "Bash(pip show sqlalchemy)",
+      "Bash(python -c \"import yfinance as yf; t = yf.Ticker\\(''RELIANCE.NS''\\); info = t.fast_info; print\\(''Currency:'', info.currency if hasattr\\(info, ''currency''\\) else ''N/A''\\); print\\(''Last Price:'', info.last_price if hasattr\\(info, ''last_price''\\) else ''N/A''\\); print\\(''Exchange:'', info.exchange if hasattr\\(info, ''exchange''\\) else ''N/A''\\)\")",
+      "Bash(python -c \":*)",
+      "Bash(pip show uvicorn)",
+      "Bash(pip show websockets)",
+      "Bash(python3 -c \":*)",
+      "Bash(npm run build)",
+      "Bash(timeout 6 python -m uvicorn main:app --host 0.0.0.0 --port 8000)",
+      "Bash(timeout 8 python -c \":*)",
+      "Bash(git init)",
+      "Bash(git status -u)"
+    ]
+  }
+}
