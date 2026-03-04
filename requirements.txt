@@ -1,0 +1,2 @@
+# Root-level requirements that points to backend deps
+-r backend/requirements.txt

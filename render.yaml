@@ -3,12 +3,12 @@ services:
     name: paper-trader
     runtime: python
     plan: free
-    buildCommand: |
-      pip install -r backend/requirements.txt &&
-      cd frontend && npm install && npm run build
-    startCommand: cd backend && python -m uvicorn main:app --host 0.0.0.0 --port $PORT
+    buildCommand: "pip install -r backend/requirements.txt && cd frontend && npm install && npm run build"
+    startCommand: "cd backend && python -m uvicorn main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: PYTHON_VERSION
-        value: "3.13"
+        value: "3.13.2"
       - key: NODE_VERSION
         value: "20"
+      - key: RENDER
+        value: "true"
